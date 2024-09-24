@@ -2,13 +2,9 @@ name: Ruby CI
 
 on:
   push:
-    branches:
-      - master
+    branches: [ main ]
   pull_request:
-    branches:
-      - master
-#  workflow_dispatch:
-   
+    branches: [ main ]
 
 jobs:
   test:
@@ -20,6 +16,10 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.0.0 # You can change this to match your project's Ruby version
+    - name: Debug - List directory contents
+      run: |
+        pwd
+        ls -la
     - name: Install dependencies
       run: |
         gem install bundler

@@ -53,7 +53,7 @@ class Move
 
     def display_position
         puts "#{@x} #{@y} #{@direction}"
-        puts "thanks for playing. :)"
+        puts "thanks for playing again. :)"
     end
 end
 
